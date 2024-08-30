@@ -7,7 +7,9 @@ from flask_babel import Babel, _
 
 
 class Config:
-    """ This is the configuration class"""
+    """
+    This is the configuration class
+    """
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
@@ -21,13 +23,17 @@ babel = Babel(app)
 
 @babel.localeselector
 def get_locale() -> str:
-    """Determine the best match for supported languages."""
+    """
+    Determine the best match for supported languages.
+    """
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
 @app.route('/')
 def index() -> str:
-    """renders the index page"""
+    """
+    renders the index page
+    """
     return render_template('3-index.html')
 
 
