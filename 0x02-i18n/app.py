@@ -32,7 +32,7 @@ users = {
 }
 
 
-def get_user():
+def get_user() -> Union[Dict, None]:
     """
     Return the user dictionary or None if login_as was not passed
     or ID is not found.
@@ -45,7 +45,7 @@ def get_user():
 
 
 @app.before_request
-def before_request():
+def before_request() -> None:
     """Before request handler to set the user in flask.g."""
     g.user = get_user()
 
