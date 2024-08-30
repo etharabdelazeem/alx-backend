@@ -63,8 +63,6 @@ def index() -> str:
     """
     renders the index page
     """
-    print(f"Current user: {g.user}")
-    print(f"Current locale: {babel.locale_selector_func()}")
     return render_template('5-index.html')
 
 
