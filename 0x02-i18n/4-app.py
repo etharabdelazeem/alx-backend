@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Basic Flask app
+Basic Flask app with internationalization support.
 """
 from flask import Flask, render_template, request
 from flask_babel import Babel, _
